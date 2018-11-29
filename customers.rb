@@ -1,31 +1,39 @@
 class Customer
     attr_accessor :name, :acc_type
+    @@all =[]
 
-    @@all = []
-
-    def self.all
-        @@all
-      end
-  
-    def initialize(name, acc_type)
+    def initialize(name,acc_type)
         @name = name
         @acc_type = acc_type
         @@all << self
     end 
 
+    def self.all
+        @@all
+    end
+
     def accounts
-        Account.all.select{ |account| account.customer == self}
+        Account.all.select do |account|
+            account.customer == self
+        end
     end
 
     def banks
-       accounts.map{|account| account.bank}
+        accounts.map do |account|
+            account.bank
+        end
     end
 
     def balance
-        count = 0
-        accounts.map{|account| count += account.balance}
-        count
+        total = 0
+        accounts.each do |account|
+            total += account.balance
+        end
+        total
+
+        # accounts.map(&:balance).inject(:+)
     end
+
 
 
 end

@@ -3,23 +3,26 @@ class Bank
 
     @@all = []
 
-    def self.all
-        @@all
-      end
-  
     def initialize(name)
         @name = name
         @@all << self
     end
 
+    def self.all
+        @@all
+    end
+
     def accounts
-        Account.all.select{ |account| account.bank == self}
+        Account.all.select do |account|
+            account.bank == self
+        end
     end
 
     def customers
-        accounts.map{|account| account.customer}
-     end
- 
+        accounts.map do |account|
+            account.customer
+        end
+    end
 
 
 end
