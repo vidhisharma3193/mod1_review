@@ -1,6 +1,6 @@
 # Building out a many-to-many relationship
 
-1. Write all of the "initialize" methods (first for the "many" classes, then for the "belongs to" class), as well as attr_ macros
+1. Write all of the "initialize" methods (first for the "many" classes, then for the "belongs to" class), as well as attr_accessor
 
 2. Create some test data (making sure to pass in INSTANCES into the "belongs to"/"join" class) and make sure things work
 
