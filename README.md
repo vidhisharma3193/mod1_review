@@ -1,20 +1,30 @@
 # Building out a many-to-many relationship
 
-1. Write all of the "initialize" methods (first for the "many" classes, then for the "belongs to" class), as well as attr_accessor
+1. Figure out **classes** 
 
-2. Create some test data (making sure to pass in INSTANCES into the "belongs to"/"join" class) and make sure things work
+2. **Relationship**
 
-3. Create the @@all class variable, shovel all new instances into the @@all array, and create a getting class method
+3. **Attributes** for classes
 
-4. Test code
+4. Create classes with initialize method
 
-5. From the "many" classes, create a method to get all of the "join" instances that belong to that instance
+5. **TEST** your **CODE**
 
-6. Test code
+6. **attr_macros** (attr_reader/attr_wrirter/attr_accessor)
 
-7. From the "many" classes, create a method to get all of the other "many" instances that belong to that instance
+7. Create **class variable** (@@all) and **class method** (.all)
 
-8. Test code
+8. **TEST** your **CODE**
+
+9. From the "many" classes, create a method to get all of the "joiner" class instances that belong to that instance (**many-many**) / From the "one" classes, create a method to get all of the "many" instances that belong to that instance (**one-many**)
+
+10. **TEST** your **CODE**
+
+11. From the "many" classes, create a method to get all of the other "many" instances that belong to that instance
+
+12. **TEST** your **CODE**
+
+13. Check the Deliverables 
 
 ## customer
 - Customer.new() should create a new customer with a name and account_type
