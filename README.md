@@ -1,4 +1,6 @@
-# Building out a many-to-many relationship
+# OO Relations
+
+### steps:
 
 1. Figure out **classes** 
 
@@ -16,24 +18,32 @@
 
 8. **TEST** your **CODE**
 
-9. From the "many" classes, create a method to get all of the "joiner" class instances that belong to that instance (**many-many**) / From the "one" classes, create a method to get all of the "many" instances that belong to that instance (**one-many**)
+9. **one-many:**
+   From the "one" classes, create a method to get all of the "many" instances that belong to that instance
+
+   **OR**
+ 
+   **many-many:**
+   From the "many" classes, create a method to get all of the "joiner" class instances that belong to that instance 
 
 10. **TEST** your **CODE**
 
-11. From the "many" classes, create a method to get all of the other "many" instances that belong to that instance
+11. (**Only for many-many**) From the "many" classes, create a method to get all of the other "many" instances that belong to that instance
 
 12. **TEST** your **CODE**
 
 13. Check the Deliverables 
 
-## customer
-- Customer.new() should create a new customer with a name and account_type
+***
 
-- Customer#name and Customer#account_type should work
+## customer
+- Customer.new() should create a new customer with a name 
+
+- Customer#name should work
 
 - Customer.all should return all customer instances
 
-- Customer#accounts should return all account that belong to the customer
+- Customer#accounts should return all accounts that belong to the customer
 
 - Customer#banks should return all banks that are associated with the customer
 
@@ -46,12 +56,14 @@
 
 - Bank.all should return all bank instances
 
-- Bank#account should return all account that belong to the bank
+- Bank#accounts should return all accounts that belong to the bank
 
-- Bank#customers should return all of the Customers that are associated with the bank
+- Bank#customers should return all of the customers that are associated with the bank
+
+- Bank#open_account takes customer instance as an argument and create a new account with 100 as an initial balance
 
 ## account
-- Account.new() should create a new account that takes an customer instance, bank instance and balance
+- Account.new() should create a new account that takes a customer instance, a bank instance, and a balance
 
 - Account#customer, Account#bank and Account#balance should work
 
